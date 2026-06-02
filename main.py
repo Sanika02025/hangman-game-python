@@ -5,6 +5,13 @@ chosen_word = random.choice(word_list)
 print(chosen_word)
 
 # ask user to guess letter and store var guess
+
+placeholder = ""
+word_length = len(chosen_word)
+for position in range(1,6):
+    placeholder += "_"
+print(placeholder)
+
 guess = input("Guess a Letter: ").lower()
 print(guess)
 
@@ -14,4 +21,4 @@ for letter in chosen_word:
         print("Right")
     else:
         print("Wrong")
-    
+     
