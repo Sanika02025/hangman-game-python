@@ -8,17 +8,21 @@ print(chosen_word)
 
 placeholder = ""
 word_length = len(chosen_word)
-for position in range(1,6):
+for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 
 guess = input("Guess a Letter: ").lower()
-print(guess)
+
 
 # check if one of letter guessed is wrong
+display = ""
+
+
 for letter in chosen_word:
     if letter == guess:
-        print("Right")
+        display += letter
+        
     else:
-        print("Wrong")
-     
+        display += "_"
+print(display)
